@@ -193,7 +193,7 @@ public class
         mDrawerToggle = new ActionBarDrawerToggle(
                 getActivity(),                    /* host Activity */
                 mDrawerLayout,                    /* DrawerLayout object */
-                R.drawable.material_ic_toolbar_back,             /* nav drawer image to replace 'Up' caret */
+                R.drawable.material_ic_drawer_menu_navigation,             /* nav drawer image to replace 'Up' caret */
                 R.string.app_name,  /* "open drawer" description for accessibility */
                 R.string.app_name  /* "close drawer" description for accessibility */
         ) {
