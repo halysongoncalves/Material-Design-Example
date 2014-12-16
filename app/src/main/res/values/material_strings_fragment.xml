@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Fragment Names -->
+    <string name="fragment_names_monitoring">Monitoramento</string>
+    <string name="fragment_names_consumption_data">Consumo de dados</string>
+    <string name="fragment_names_reports">Relatórios</string>
+    <string name="fragment_names_settings">Configurações</string>
+    <string name="fragment_names_about">Sobre</string>
+
+
+    <!-- Drawer Menu -->
+    <string name="fragment_drawerMenu_text_applications">Aplicativos</string>
+    <string name="fragment_drawerMenu_text_reports">Relatórios</string>
+    <string name="fragment_drawerMenu_text_consumption_data">Consumo de dados</string>
+    <string name="fragment_drawerMenu_text_settings">Configurações</string>
+    <string name="fragment_drawerMenu_text_about">Sobre</string>
+
+    <string-array name="fragment_drawerMenu_title">
+        <item>@string/fragment_drawerMenu_text_applications</item>
+        <item>@string/fragment_drawerMenu_text_reports</item>
+        <item>@string/fragment_drawerMenu_text_consumption_data</item>
+        <item>@string/fragment_drawerMenu_text_settings</item>
+        <item>@string/fragment_drawerMenu_text_about</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Oi Futuro</string>
+
+    <!-- Drawer Menu Default -->
+    <string name="drawerMenuComp_textTitle">Menu 1</string>
+
+</resources>
