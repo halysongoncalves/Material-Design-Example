@@ -76,7 +76,7 @@ public abstract class BaseActivity extends ActionBarActivity implements  Navigat
     protected void initializeToolBar() {
         if (mToolBar != null) {
             mToolBar.setTitle(getTitleToolBar());
-            mToolBar.setNavigationIcon(R.drawable.material_ic_toolbar_back);
+            mToolBar.setNavigationIcon(R.drawable.material_ic_drawer_menu_navigation);
             getSupportActionBar().setDisplayHomeAsUpEnabled(getDisplayHomeAsUp());
             getSupportActionBar().setHomeButtonEnabled(getHomeButtonEnabled());
         }

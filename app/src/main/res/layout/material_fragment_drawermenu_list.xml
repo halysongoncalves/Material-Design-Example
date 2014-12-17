@@ -5,6 +5,5 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:background="@color/material_blue_grey_900"
-    android:choiceMode="singleChoice"
     android:dividerHeight="0dp"
     tools:context=".FragmentDrawerMenu" />

@@ -6,9 +6,9 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -163,9 +163,9 @@ public class
         try {
             menuDrawerTitleArray = getActivity().getResources().getStringArray(R.array.fragment_drawerMenu_title);
 
-            menuDrawerListItens = new ArrayList<DrawerMenu>();
-            for (int i = 0; i < menuDrawerTitleArray.length; i++) {
-                menuDrawerListItens.add(new DrawerMenu(menuDrawerTitleArray[i]));
+            menuDrawerListItens = new ArrayList<>();
+            for (String aMenuDrawerTitleArray : menuDrawerTitleArray) {
+                menuDrawerListItens.add(new DrawerMenu(aMenuDrawerTitleArray));
             }
             return menuDrawerListItens;
         } catch (Resources.NotFoundException notFoundExcepetion) {
@@ -193,7 +193,6 @@ public class
         mDrawerToggle = new ActionBarDrawerToggle(
                 getActivity(),                    /* host Activity */
                 mDrawerLayout,                    /* DrawerLayout object */
-                R.drawable.material_ic_drawer_menu_navigation,             /* nav drawer image to replace 'Up' caret */
                 R.string.app_name,  /* "open drawer" description for accessibility */
                 R.string.app_name  /* "close drawer" description for accessibility */
         ) {

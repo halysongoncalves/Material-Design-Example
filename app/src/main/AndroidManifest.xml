@@ -20,14 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name="br.com.halyson.materialdesign.activity.DetailActivity"
-            android:label="DetailActivity"
-            android:parentActivityName="br.com.halyson.materialdesign.activity.HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.halyson.materialdesign.activity.HomeActivity"/>
-        </activity>
     </application>
 
 </manifest>

@@ -14,7 +14,8 @@
             android:id="@+id/screen_default_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/red"
+            android:background="@color/theme_dialer_primary"
+            android:minHeight="?attr/actionBarSize"
             tools:context=".ToolBar" />
 
         <FrameLayout
@@ -35,3 +36,48 @@
         tools:context=".NavigationDrawer" />
 
 </android.support.v4.widget.DrawerLayout>
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:id="@+id/screen_default_content_main"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+
+<!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/screen_default_toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/theme_dialer_primary"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--tools:context=".ToolBar" />-->
+
+<!--<android.support.v4.widget.DrawerLayout-->
+    <!--android:layout_below="@+id/screen_default_toolbar"-->
+    <!--android:id="@+id/screen_default_drawer_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".ScreenDefault">-->
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/screen_default_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/screen_default_toolbar"-->
+        <!--tools:context=".ToolBar" />-->
+
+    <!--<fragment-->
+        <!--android:id="@+id/screen_default_navigation_drawer"-->
+        <!--android:layout_width="@dimen/drawerMenu_width"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:name="br.com.halyson.materialdesign.fragment.NavigationDrawerFragment"-->
+        <!--android:layout_gravity="start"-->
+        <!--tools:layout="@layout/material_fragment_drawermenu_list"-->
+        <!--tools:context=".NavigationDrawer" />-->
+<!--</android.support.v4.widget.DrawerLayout>-->
+<!--</RelativeLayout>-->
+
+
+
+
+

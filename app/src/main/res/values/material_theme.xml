@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="AppTheme.Base" />
+    <style name="AppTheme" parent="AppTheme.Base"/>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <!-- android theme colors -->
+        <item name="colorPrimary">@color/theme_dialer_primary</item>
+        <item name="colorPrimaryDark">@color/theme_dialer_high</item>
+        <item name="colorAccent">@color/theme_dialer_accent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-    </style>
+   </style>
 </resources>
