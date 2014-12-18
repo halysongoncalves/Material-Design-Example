@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import br.com.halyson.materialdesign.R;
 import br.com.halyson.materialdesign.activity.api.BaseActivity;
+import br.com.halyson.materialdesign.constants.FragmentNames;
+import br.com.halyson.materialdesign.fragment.HomeFragment;
 
 
 public class HomeActivity extends BaseActivity {
@@ -12,6 +14,7 @@ public class HomeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
             initializeToolBar();
+            getSupportFragmentManager().beginTransaction().add(R.id.screen_default_container, HomeFragment.newInstance(), FragmentNames.FRAGMENT_HOME_).commit();
         }
     }
 
