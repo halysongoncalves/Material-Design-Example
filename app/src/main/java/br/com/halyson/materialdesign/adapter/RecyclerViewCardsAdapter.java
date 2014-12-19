@@ -32,7 +32,12 @@ public class RecyclerViewCardsAdapter extends RecyclerView.Adapter<RecyclerViewC
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final CardViewBean itemCardView = mListItemsCard.get(position);
         holder.itemView.setTag(itemCardView);
-        Picasso.with(holder.imageView.getContext()).load(mListItemsCard.get(position).getUrlImage()).into(holder.imageView);
+        Picasso.with(holder.imageView.getContext())
+                .load(mListItemsCard.get(position)
+                .getUrlImage())
+                .error(R.drawable.materia_placeholder)
+                .placeholder(R.drawable.materia_placeholder)
+                .into(holder.imageView);
     }
 
     @Override
