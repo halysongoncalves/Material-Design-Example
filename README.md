@@ -40,8 +40,7 @@ submitting a pull request through GitHub. Please see CONTRIBUTING.md for more de
 
 Getting Started
 ---------------
-
-  [![Google Play](imagem)](google play)
+<img src="art/GooglePlay.png" height="45" width="129" alt="Screenshot" href="https://play.google.com/store/apps/details?id=br.com.halyson.materialdesign"/> 
 
 
 <h2>Copyright</h2>
