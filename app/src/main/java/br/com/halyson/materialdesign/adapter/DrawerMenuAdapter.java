@@ -52,7 +52,7 @@ public class DrawerMenuAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.mTitle.setText(mListItensDrawerMenu.get(position).getmTitle());
+        holder.mTitle.setText(mListItensDrawerMenu.get(position).getTitle());
 
         return convertView;
     }

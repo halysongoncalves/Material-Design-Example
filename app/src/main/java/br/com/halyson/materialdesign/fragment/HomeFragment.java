@@ -25,8 +25,6 @@ public class HomeFragment extends BaseFragment {
     private View mViewHome;
     private PagerSlidingTabStrip mPagerSlidingTabStrip;
     private ViewPager mViewPager;
-    private HomePagerAdapter mHomePagerAdapter;
-    private List<SectionsTabs> mSectionsTabs;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -37,7 +35,6 @@ public class HomeFragment extends BaseFragment {
         mViewHome = inflater.inflate(R.layout.material_fragment_home, container, false);
 
         loadViewComponents();
-        mSectionsTabs = loadSectionTabs();
         loadInfoView();
 
         return mViewHome;
@@ -49,12 +46,11 @@ public class HomeFragment extends BaseFragment {
     }
 
     private void loadInfoView() {
-        mHomePagerAdapter = new HomePagerAdapter(loadSectionTabs(), getFragmentManager());
-        mViewPager.setAdapter(mHomePagerAdapter);
-        mPagerSlidingTabStrip.setTextColor(getResources().getColor(R.color.white));
-        for (int i = 0; i < mSectionsTabs.size(); i++) {
-            mViewPager.setCurrentItem(i);
-        }
+        mViewPager.setAdapter(new HomePagerAdapter(loadSectionTabs(), getChildFragmentManager()));
+        mPagerSlidingTabStrip.setTextColor(mViewHome.getResources().getColor(R.color.white));
+        mPagerSlidingTabStrip.setDividerColor(mViewHome.getResources().getColor(R.color.theme_dialer_primary));
+        mPagerSlidingTabStrip.setIndicatorColor(mViewHome.getResources().getColor(android.R.color.transparent));
+        mPagerSlidingTabStrip.setViewPager(mViewPager);
 
     }
 

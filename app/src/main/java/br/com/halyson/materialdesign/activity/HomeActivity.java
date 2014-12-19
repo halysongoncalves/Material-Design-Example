@@ -13,7 +13,6 @@ public class HomeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
-            initializeToolBar();
             getSupportFragmentManager().beginTransaction().add(R.id.screen_default_container, HomeFragment.newInstance(), FragmentNames.FRAGMENT_HOME_).commit();
         }
     }

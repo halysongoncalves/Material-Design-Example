@@ -1,17 +1,17 @@
 package br.com.halyson.materialdesign.model;
 
 public class DrawerMenu {
-    private String mTitle;
+    private String title;
 
     public DrawerMenu(String title) {
-        this.mTitle = title;
+        this.title = title;
     }
 
-    public String getmTitle() {
-        return mTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setmTitle(String mTitle) {
-        this.mTitle = mTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

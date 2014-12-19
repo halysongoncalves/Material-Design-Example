@@ -25,6 +25,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 
 import br.com.halyson.materialdesign.R;
+import br.com.halyson.materialdesign.constants.DrawerMenu;
+import br.com.halyson.materialdesign.fragment.HomeFragment;
 import br.com.halyson.materialdesign.fragment.NavigationDrawerFragment;
 
 public abstract class BaseActivity extends ActionBarActivity implements  NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -38,6 +40,7 @@ public abstract class BaseActivity extends ActionBarActivity implements  Navigat
 
         loadComponents();
         loadInfoView();
+        initializeToolBar();
     }
 
     private void loadComponents() {
@@ -60,7 +63,15 @@ public abstract class BaseActivity extends ActionBarActivity implements  Navigat
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         switch (position) {
-
+            case DrawerMenu.HOME:
+                fragmentTransaction(HomeFragment.newInstance());
+                break;
+            case DrawerMenu.FRAGMENT1:
+                fragmentTransaction(HomeFragment.newInstance());
+                break;
+            case DrawerMenu.FRAGMENT2:
+                fragmentTransaction(HomeFragment.newInstance());
+                break;
         }
     }
 
