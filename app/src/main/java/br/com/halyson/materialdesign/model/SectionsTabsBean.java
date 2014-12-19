@@ -1,9 +1,12 @@
 package br.com.halyson.materialdesign.model;
 
-public class DrawerMenu {
+/**
+ * Created by halyson on 18/12/14.
+ */
+public class SectionsTabsBean {
     private String title;
 
-    public DrawerMenu(String title) {
+    public SectionsTabsBean(String title) {
         this.title = title;
     }
 

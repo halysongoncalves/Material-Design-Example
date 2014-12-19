@@ -1,12 +1,9 @@
 package br.com.halyson.materialdesign.model;
 
-/**
- * Created by halyson on 18/12/14.
- */
-public class SectionsTabs {
+public class DrawerMenuBean {
     private String title;
 
-    public SectionsTabs(String title) {
+    public DrawerMenuBean(String title) {
         this.title = title;
     }
 

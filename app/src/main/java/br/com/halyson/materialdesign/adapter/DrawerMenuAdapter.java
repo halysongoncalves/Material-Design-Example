@@ -10,27 +10,27 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import br.com.halyson.materialdesign.model.DrawerMenu;
+import br.com.halyson.materialdesign.model.DrawerMenuBean;
 import br.com.halyson.materialdesign.R;
 
 
 public class DrawerMenuAdapter extends BaseAdapter {
     private Context mContext;
-    private ArrayList<DrawerMenu> mListItensDrawerMenu;
+    private ArrayList<DrawerMenuBean> mListItensDrawerMenuBean;
 
-    public DrawerMenuAdapter(Context mContext, ArrayList<DrawerMenu> mListItensDrawer) {
+    public DrawerMenuAdapter(Context mContext, ArrayList<DrawerMenuBean> mListItensDrawer) {
         this.mContext = mContext;
-        this.mListItensDrawerMenu = mListItensDrawer;
+        this.mListItensDrawerMenuBean = mListItensDrawer;
     }
 
     @Override
     public int getCount() {
-        return mListItensDrawerMenu.size();
+        return mListItensDrawerMenuBean.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return mListItensDrawerMenu.get(position);
+        return mListItensDrawerMenuBean.get(position);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class DrawerMenuAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.mTitle.setText(mListItensDrawerMenu.get(position).getTitle());
+        holder.mTitle.setText(mListItensDrawerMenuBean.get(position).getTitle());
 
         return convertView;
     }

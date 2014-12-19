@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import br.com.halyson.materialdesign.R;
 import br.com.halyson.materialdesign.adapter.DrawerMenuAdapter;
 import br.com.halyson.materialdesign.fragment.api.BaseFragment;
-import br.com.halyson.materialdesign.model.DrawerMenu;
+import br.com.halyson.materialdesign.model.DrawerMenuBean;
 
 
 /**
@@ -147,7 +147,7 @@ public class
     }
 
     private void loadInfoView() {
-        ArrayList<DrawerMenu> menuDrawerListItens = loadMenuDrawerItens();
+        ArrayList<DrawerMenuBean> menuDrawerListItens = loadMenuDrawerItens();
         if (menuDrawerListItens != null) {
             DrawerMenuAdapter drawerMenuAdapter = new DrawerMenuAdapter(mContext, menuDrawerListItens);
 
@@ -156,16 +156,16 @@ public class
         }
     }
 
-    private ArrayList<DrawerMenu> loadMenuDrawerItens() {
+    private ArrayList<DrawerMenuBean> loadMenuDrawerItens() {
         String[] menuDrawerTitleArray;
-        ArrayList<DrawerMenu> menuDrawerListItens = null;
+        ArrayList<DrawerMenuBean> menuDrawerListItens = null;
 
         try {
             menuDrawerTitleArray = getActivity().getResources().getStringArray(R.array.fragment_drawerMenu_title);
 
             menuDrawerListItens = new ArrayList<>();
             for (String aMenuDrawerTitleArray : menuDrawerTitleArray) {
-                menuDrawerListItens.add(new DrawerMenu(aMenuDrawerTitleArray));
+                menuDrawerListItens.add(new DrawerMenuBean(aMenuDrawerTitleArray));
             }
             return menuDrawerListItens;
         } catch (Resources.NotFoundException notFoundExcepetion) {

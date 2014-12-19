@@ -7,25 +7,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.halyson.materialdesign.R;
 import br.com.halyson.materialdesign.adapter.RecyclerViewCardsAdapter;
 import br.com.halyson.materialdesign.fragment.api.BaseFragment;
+import br.com.halyson.materialdesign.model.CardViewBean;
 
 /**
  * Created by halyson on 18/12/14.
  */
 public class RecylerViewCardsFragment extends BaseFragment {
-    public static RecylerViewCardsFragment newInstance() {
-        return new RecylerViewCardsFragment();
-    }
+    private static final String MOCK_URL = "http://lorempixel.com/800/400/nightlife/";
     private View mViewRecyclerCardsView;
     private RecyclerView mRecyclerView;
 
+    public static RecylerViewCardsFragment newInstance() {
+        return new RecylerViewCardsFragment();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -47,8 +51,15 @@ public class RecylerViewCardsFragment extends BaseFragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(layoutManager);
-        mRecyclerView.setAdapter(new RecyclerViewCardsAdapter());
+        mRecyclerView.setAdapter(new RecyclerViewCardsAdapter(createMockList()));
+    }
 
-
+    private List<CardViewBean> createMockList() {
+        List<CardViewBean> listCard = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            listCard.add(new CardViewBean(MOCK_URL + i));
+        }
+        return listCard;
     }
 }
+

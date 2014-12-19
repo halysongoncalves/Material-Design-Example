@@ -12,12 +12,11 @@ import android.view.ViewGroup;
 import com.astuetz.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import br.com.halyson.materialdesign.R;
 import br.com.halyson.materialdesign.adapter.HomePagerAdapter;
 import br.com.halyson.materialdesign.fragment.api.BaseFragment;
-import br.com.halyson.materialdesign.model.SectionsTabs;
+import br.com.halyson.materialdesign.model.SectionsTabsBean;
 
 
 public class HomeFragment extends BaseFragment {
@@ -54,16 +53,16 @@ public class HomeFragment extends BaseFragment {
 
     }
 
-    private ArrayList<SectionsTabs> loadSectionTabs() {
+    private ArrayList<SectionsTabsBean> loadSectionTabs() {
         String[] sectionsTabsTitleArray;
-        ArrayList<SectionsTabs> sectionTabsListItens = null;
+        ArrayList<SectionsTabsBean> sectionTabsListItens = null;
 
         try {
             sectionsTabsTitleArray = getActivity().getResources().getStringArray(R.array.fragment_home_sections_tabs_title);
 
             sectionTabsListItens = new ArrayList<>();
             for (String sectionsTabsTitle : sectionsTabsTitleArray) {
-                sectionTabsListItens.add(new SectionsTabs(sectionsTabsTitle));
+                sectionTabsListItens.add(new SectionsTabsBean(sectionsTabsTitle));
             }
             return sectionTabsListItens;
         } catch (Resources.NotFoundException notFoundExcepetion) {

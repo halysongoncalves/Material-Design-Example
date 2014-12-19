@@ -10,33 +10,33 @@ import br.com.halyson.materialdesign.fragment.RecylerViewCardsFragment;
 import br.com.halyson.materialdesign.fragment.DefaultFragment;
 import br.com.halyson.materialdesign.fragment.Fragment2;
 import br.com.halyson.materialdesign.fragment.Fragment3;
-import br.com.halyson.materialdesign.model.SectionsTabs;
+import br.com.halyson.materialdesign.model.SectionsTabsBean;
 
 /**
  * Created by halyson on 18/12/14.
  */
 public class HomePagerAdapter extends FragmentPagerAdapter {
-    private List<SectionsTabs> mListSectionsTabs;
+    private List<SectionsTabsBean> mListSectionsTabBeans;
 
-    public HomePagerAdapter(List<SectionsTabs> listSections, FragmentManager fragmentManager) {
+    public HomePagerAdapter(List<SectionsTabsBean> listSections, FragmentManager fragmentManager) {
         super(fragmentManager);
-        this.mListSectionsTabs = listSections;
+        this.mListSectionsTabBeans = listSections;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if (mListSectionsTabs == null || mListSectionsTabs.isEmpty()) {
+        if (mListSectionsTabBeans == null || mListSectionsTabBeans.isEmpty()) {
             return "";
         }
-        return mListSectionsTabs.get(position).getTitle();
+        return mListSectionsTabBeans.get(position).getTitle();
     }
 
     @Override
     public int getCount() {
-        if (mListSectionsTabs == null || mListSectionsTabs.isEmpty()) {
+        if (mListSectionsTabBeans == null || mListSectionsTabBeans.isEmpty()) {
             return 0;
         }
-        return mListSectionsTabs.size();
+        return mListSectionsTabBeans.size();
     }
 
     @Override
