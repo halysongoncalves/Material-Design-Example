@@ -11,9 +11,19 @@ android {
         versionCode 1
         versionName "1.0.0"
     }
+
     buildTypes {
         release {
+            zipAlignEnabled true
             minifyEnabled false
+            shrinkResources false
+            debuggable false
+            proguardFiles 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
             proguardFiles 'proguard-rules.pro'
         }
     }
