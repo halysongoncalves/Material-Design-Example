@@ -21,10 +21,8 @@ Pre-requisites
 Screenshots
 -------------
 
-![Material Design Example](art/MaterialExampleDesign1.png)
-
-![Material Design Example](art/MaterialExampleDesign2.png)
-
+<img src="art/MaterialExampleDesign1.png" height="400" alt="Screenshot"/> 
+<img src="art/MaterialExampleDesign2.png" height="400" alt="Screenshot"/> 
 
 Getting Started
 ---------------
