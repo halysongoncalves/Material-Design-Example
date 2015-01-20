@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Color Palette -->
-    <color name="white">#ffff</color>
-    <color name="black">#000000</color>
-    <color name="red">#FF0000</color>
 
     <!-- Theme colors -->
     <color name="theme_light">#F48FB1</color>
     <color name="theme_default_primary">#EC407A</color>
     <color name="theme_window_background">#2A2A2A</color>
-    <color name="accent">#EEFF41</color>
+    <color name="accent">#ff4081</color>
     <color name="gray_row_color">#ff515252</color>
 
+
+    <color name="primary">#009688</color>
+    <color name="primaryDark">#00796b</color>
+    <color name="accentLight">#F4FF81</color>
 
     <!-- Dialer theme -->
     <color name="dialer_call">#00C853</color>
@@ -31,6 +32,10 @@
 
     <color name="color_set_4_primary">#ff8a65</color>
     <color name="color_set_4_accent">#d500f9</color>
+
+
+    <color name="ripple">#ff80ab</color>
+    <color name="accent_pressed">#f50057</color>
 
 </resources>
 

@@ -44,7 +44,7 @@ public class DrawerMenuAdapter extends BaseAdapter {
 
         if (convertView == null) {
             LayoutInflater mInflater = (LayoutInflater) mContext.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView = mInflater.inflate(R.layout.material_fragment_drawermenu_comp, null);
+            convertView = mInflater.inflate(R.layout.fragment_drawer_menu_comp, null);
 
             holder = new ViewHolder();
             holder.mTitle = (TextView) convertView.findViewById(R.id.fragment_drawerMenu_comp_title);

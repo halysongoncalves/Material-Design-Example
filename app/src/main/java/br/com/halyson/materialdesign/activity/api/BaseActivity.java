@@ -16,10 +16,8 @@
 
 package br.com.halyson.materialdesign.activity.api;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -29,32 +27,34 @@ import br.com.halyson.materialdesign.constants.DrawerMenu;
 import br.com.halyson.materialdesign.fragment.HomeFragment;
 import br.com.halyson.materialdesign.fragment.NavigationDrawerFragment;
 
-public abstract class BaseActivity extends ActionBarActivity implements  NavigationDrawerFragment.NavigationDrawerCallbacks {
+public abstract class BaseActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
     protected Toolbar mToolBar;
-    protected NavigationDrawerFragment mNavigationDrawerFragment;
-    protected Context mContext;
+    private NavigationDrawerFragment mNavigationDrawerFragment;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutResourceIdentifier());
+        setContentView(setLayoutResourceIdentifier());
 
-        loadComponents();
-        loadInfoView();
-        initializeToolBar();
+        loadViewComponents();
+        loadInfoToolbar();
+        loadInfoDrawerMenu();
     }
 
-    private void loadComponents() {
+    private void loadViewComponents() {
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.screen_default_navigation_drawer);
         mToolBar = (Toolbar) findViewById(R.id.screen_default_toolbar);
-        mContext = getApplicationContext();
     }
 
 
-    private void loadInfoView() {
-        if (mToolBar != null) {
-            setSupportActionBar(mToolBar);
-        }
+    private void loadInfoToolbar() {
+        setSupportActionBar(mToolBar);
+        getSupportActionBar().setTitle(getTitleToolBar());
+    }
+
+
+    private void loadInfoDrawerMenu() {
         mNavigationDrawerFragment.setUp(
                 R.id.screen_default_navigation_drawer,
                 (DrawerLayout) findViewById(R.id.screen_default_drawer_layout));
@@ -64,42 +64,26 @@ public abstract class BaseActivity extends ActionBarActivity implements  Navigat
     public void onNavigationDrawerItemSelected(int position) {
         switch (position) {
             case DrawerMenu.HOME:
-                fragmentTransaction(HomeFragment.newInstance());
+                fragmentTransaction(new HomeFragment());
                 break;
             case DrawerMenu.FRAGMENT1:
-                fragmentTransaction(HomeFragment.newInstance());
+                fragmentTransaction(new HomeFragment());
                 break;
             case DrawerMenu.FRAGMENT2:
-                fragmentTransaction(HomeFragment.newInstance());
+                fragmentTransaction(new HomeFragment());
                 break;
         }
     }
 
     private void fragmentTransaction(Fragment fragment) {
         if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction()
+            getSupportFragmentManager().beginTransaction()
                     .replace(R.id.screen_default_container, fragment)
                     .commit();
         }
     }
 
-    protected void initializeToolBar() {
-        if (mToolBar != null) {
-            mToolBar.setTitle(getTitleToolBar());
-            mToolBar.setNavigationIcon(R.drawable.material_ic_drawer_menu_navigation);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(getDisplayHomeAsUp());
-            getSupportActionBar().setHomeButtonEnabled(getHomeButtonEnabled());
-        }
-    }
+    protected abstract int setLayoutResourceIdentifier();
 
-
-    protected abstract int getLayoutResourceIdentifier();
-
-    protected abstract String getTitleToolBar();
-
-    protected abstract boolean getDisplayHomeAsUp();
-
-    protected abstract boolean getHomeButtonEnabled();
-
+    protected abstract int getTitleToolBar();
 }

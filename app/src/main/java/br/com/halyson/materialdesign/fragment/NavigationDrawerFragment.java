@@ -78,7 +78,7 @@ public class
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mDrawerListView = (ListView) inflater.inflate(R.layout.material_fragment_drawermenu_list, container, false);
+        mDrawerListView = (ListView) inflater.inflate(R.layout.fragment_drawer_menu, container, false);
 
         loadListeners();
         loadInfoView();
@@ -184,7 +184,7 @@ public class
         mDrawerLayout = drawerLayout;
 
         // set a custom shadow that overlays the main content when the drawer opens
-        mDrawerLayout.setDrawerShadow(R.drawable.material_ic_drawer_menu_shadow, GravityCompat.START);
+        mDrawerLayout.setDrawerShadow(R.drawable.ic_drawer_menu_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
 
 

@@ -8,18 +8,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/material_ic_launcher"
+        android:name=".MaterialDesignApplication"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="br.com.halyson.materialdesign.activity.HomeActivity"
-            android:label="@string/app_name">
+            android:name="br.com.halyson.materialdesign.activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.DetailsActivity"/>
     </application>
 
 </manifest>

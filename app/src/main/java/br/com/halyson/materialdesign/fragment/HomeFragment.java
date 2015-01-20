@@ -1,73 +1,85 @@
 package br.com.halyson.materialdesign.fragment;
 
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.astuetz.PagerSlidingTabStrip;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import br.com.halyson.materialdesign.R;
 import br.com.halyson.materialdesign.adapter.HomePagerAdapter;
 import br.com.halyson.materialdesign.fragment.api.BaseFragment;
-import br.com.halyson.materialdesign.model.SectionsTabsBean;
+import br.com.halyson.materialdesign.interfaces.home.HomeView;
+import br.com.halyson.materialdesign.presenter.HomePresenterImpl;
 
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements HomeView {
     private static final String TAG = HomeFragment.class.getSimpleName();
     private View mViewHome;
     private PagerSlidingTabStrip mPagerSlidingTabStrip;
     private ViewPager mViewPager;
-
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
-    }
+    private HomePresenterImpl mHomePresenter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mViewHome = inflater.inflate(R.layout.material_fragment_home, container, false);
+        mViewHome = inflater.inflate(R.layout.fragment_default, container, false);
 
         loadViewComponents();
-        loadInfoView();
+        initPresenter();
+        loadSectionsTabs();
 
         return mViewHome;
     }
 
-    private void loadViewComponents() {
+    @Override
+    public void onDestroy() {
+        mHomePresenter.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
+    public void loadViewComponents() {
         mPagerSlidingTabStrip = (PagerSlidingTabStrip) mViewHome.findViewById(R.id.fragment_home_pager_sliding_tab);
         mViewPager = (ViewPager) mViewHome.findViewById(R.id.fragment_home_view_pager);
     }
 
-    private void loadInfoView() {
-        mViewPager.setAdapter(new HomePagerAdapter(loadSectionTabs(), getChildFragmentManager()));
-        mPagerSlidingTabStrip.setTextColor(mViewHome.getResources().getColor(R.color.white));
-        mPagerSlidingTabStrip.setDividerColor(mViewHome.getResources().getColor(R.color.theme_dialer_primary));
-        mPagerSlidingTabStrip.setIndicatorColor(mViewHome.getResources().getColor(android.R.color.transparent));
-        mPagerSlidingTabStrip.setViewPager(mViewPager);
-
+    @Override
+    public void initPresenter() {
+        mHomePresenter = new HomePresenterImpl(this);
     }
 
-    private ArrayList<SectionsTabsBean> loadSectionTabs() {
-        String[] sectionsTabsTitleArray;
-        ArrayList<SectionsTabsBean> sectionTabsListItens = null;
+    @Override
+    public void loadSectionsTabs() {
+        mHomePresenter.loadSectionsTabs();
+    }
 
-        try {
-            sectionsTabsTitleArray = getActivity().getResources().getStringArray(R.array.fragment_home_sections_tabs_title);
+    @Override
+    public void loadViewPager(List<String> listTitleTabs) {
+        mViewPager.setAdapter(new HomePagerAdapter(listTitleTabs, getChildFragmentManager()));
+    }
 
-            sectionTabsListItens = new ArrayList<>();
-            for (String sectionsTabsTitle : sectionsTabsTitleArray) {
-                sectionTabsListItens.add(new SectionsTabsBean(sectionsTabsTitle));
-            }
-            return sectionTabsListItens;
-        } catch (Resources.NotFoundException notFoundExcepetion) {
-            Log.e(TAG, "Error Getting The Array", notFoundExcepetion);
-        }
-        return sectionTabsListItens;
+    @Override
+    public void setColorTabs(int color) {
+        mPagerSlidingTabStrip.setTextColor(color);
+    }
+
+    @Override
+    public void setDividerColorTabs(int color) {
+        mPagerSlidingTabStrip.setDividerColor(mViewHome.getResources().getColor(R.color.theme_dialer_primary));
+    }
+
+    @Override
+    public void setIndicatorColorTabs(int color) {
+        mPagerSlidingTabStrip.setDividerColor(color);
+    }
+
+    @Override
+    public void loadTabs() {
+        mPagerSlidingTabStrip.setViewPager(mViewPager);
     }
 }

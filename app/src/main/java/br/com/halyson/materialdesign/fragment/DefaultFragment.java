@@ -19,7 +19,7 @@ public class DefaultFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mViewFragmentDefault = inflater.inflate(R.layout.material_fragment_recycler_view, container, false);
+        mViewFragmentDefault = inflater.inflate(R.layout.fragment_recycler_view, container, false);
 
         return mViewFragmentDefault;
     }

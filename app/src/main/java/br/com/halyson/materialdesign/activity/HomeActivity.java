@@ -9,31 +9,23 @@ import br.com.halyson.materialdesign.fragment.HomeFragment;
 
 
 public class HomeActivity extends BaseActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().add(R.id.screen_default_container, HomeFragment.newInstance(), FragmentNames.FRAGMENT_HOME_).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.screen_default_container, new HomeFragment(), FragmentNames.FRAGMENT_HOME_).commit();
         }
     }
 
     @Override
-    protected int getLayoutResourceIdentifier() {
-        return R.layout.material_screen_default;
+    protected int setLayoutResourceIdentifier() {
+        return R.layout.screen_default;
     }
 
     @Override
-    protected String getTitleToolBar() {
-        return "HomeActivity";
+    protected int getTitleToolBar() {
+        return R.string.app_name;
     }
 
-    @Override
-    protected boolean getDisplayHomeAsUp() {
-        return true;
-    }
-
-    @Override
-    protected boolean getHomeButtonEnabled() {
-        return true;
-    }
 }

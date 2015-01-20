@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.melnykov.fab.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,13 +20,14 @@ import br.com.halyson.materialdesign.model.CardViewBean;
 /**
  * Created by halyson on 18/12/14.
  */
-public class RecylerViewCardsFragment extends BaseFragment {
+public class RecylerViewFragment extends BaseFragment {
     private static final String MOCK_URL = "http://lorempixel.com/800/400/nightlife/";
     private View mViewRecyclerCardsView;
     private RecyclerView mRecyclerView;
+    private FloatingActionButton mFloatingActionButton;
 
-    public static RecylerViewCardsFragment newInstance() {
-        return new RecylerViewCardsFragment();
+    public static RecylerViewFragment newInstance() {
+        return new RecylerViewFragment();
     }
 
     @Override
@@ -34,7 +37,7 @@ public class RecylerViewCardsFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mViewRecyclerCardsView = inflater.inflate(R.layout.material_fragment_recycler_view, container, false);
+        mViewRecyclerCardsView = inflater.inflate(R.layout.fragment_recycler_view, container, false);
 
         loadViewComponents();
         loadInfoView();
@@ -44,14 +47,16 @@ public class RecylerViewCardsFragment extends BaseFragment {
 
     private void loadViewComponents() {
         mRecyclerView = (RecyclerView) mViewRecyclerCardsView.findViewById(R.id.fragment_recyler_view_content_main);
+        mFloatingActionButton = (FloatingActionButton) mViewRecyclerCardsView.findViewById(R.id.fragment_recyler_view_float_action_button);
     }
 
     private void loadInfoView() {
+        mFloatingActionButton.attachToRecyclerView(mRecyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(layoutManager);
-        mRecyclerView.setAdapter(new RecyclerViewCardsAdapter(createMockList()));
+        mRecyclerView.setAdapter(new RecyclerViewCardsAdapter(getActivity(),createMockList()));
     }
 
     private List<CardViewBean> createMockList() {

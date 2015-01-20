@@ -1,0 +1,103 @@
+<resources>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_two">2dp</dimen>
+    <dimen name="text_size_four">4dp</dimen>
+    <dimen name="text_size_six">6dp</dimen>
+    <dimen name="text_size_eight">8dp</dimen>
+    <dimen name="text_size_ten">10dp</dimen>
+    <dimen name="text_size_twelve">12dp</dimen>
+    <dimen name="text_size_fourteen">14dp</dimen>
+    <dimen name="text_size_sixteen">16dp</dimen>
+    <dimen name="text_size_eighteen">18dp</dimen>
+    <dimen name="text_size_twenty">20dp</dimen>
+    <dimen name="text_size_twenty_two">22dp</dimen>
+    <dimen name="text_size_twenty_four">24dp</dimen>
+    <dimen name="text_size_twenty_six">24dp</dimen>
+    <dimen name="ttext_size_wenty_eight">28dp</dimen>
+
+    <!-- Spacings -->
+    <dimen name="two">2dp</dimen>
+    <dimen name="four">4dp</dimen>
+    <dimen name="six">6dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="fourteen">14dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="eighteen">18dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="twenty_two">22dp</dimen>
+    <dimen name="twenty_four">24dp</dimen>
+    <dimen name="twenty_six">24dp</dimen>
+    <dimen name="twenty_eight">28dp</dimen>
+
+    <!--Margin -->
+    <dimen name="margin_two">@dimen/two</dimen>
+    <dimen name="margin_four">@dimen/four</dimen>
+    <dimen name="margin_six">@dimen/six</dimen>
+    <dimen name="margin_eight">@dimen/eight</dimen>
+    <dimen name="margin_ten">@dimen/ten</dimen>
+    <dimen name="margin_twelve">@dimen/twelve</dimen>
+    <dimen name="margin_fourteen">@dimen/fourteen</dimen>
+    <dimen name="margin_sixteen">@dimen/sixteen</dimen>
+    <dimen name="margin_eighteen">@dimen/eighteen</dimen>
+    <dimen name="margin_twenty">@dimen/twenty</dimen>
+    <dimen name="margin_twenty_two">@dimen/twenty_two</dimen>
+    <dimen name="margin_twenty_four">@dimen/twenty_four</dimen>
+    <dimen name="margin_twenty_six">@dimen/twenty_six</dimen>
+    <dimen name="margin_wenty_eight">@dimen/twenty_eight</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_two">@dimen/two</dimen>
+    <dimen name="padding_four">@dimen/four</dimen>
+    <dimen name="padding_six">@dimen/six</dimen>
+    <dimen name="padding_eight">@dimen/eight</dimen>
+    <dimen name="padding_ten">@dimen/ten</dimen>
+    <dimen name="padding_twelve">@dimen/twelve</dimen>
+    <dimen name="padding_fourteen">@dimen/fourteen</dimen>
+    <dimen name="padding_sixteen">@dimen/sixteen</dimen>
+    <dimen name="padding_eighteen">@dimen/eighteen</dimen>
+    <dimen name="padding_twenty">@dimen/twenty</dimen>
+    <dimen name="padding_twenty_two">@dimen/twenty_two</dimen>
+    <dimen name="padding_twenty_four">@dimen/twenty_four</dimen>
+    <dimen name="padding_twenty_six">@dimen/twenty_six</dimen>
+    <dimen name="padding_wenty_eight">@dimen/twenty_eight</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_two">@dimen/two</dimen>
+    <dimen name="elevation_four">@dimen/four</dimen>
+    <dimen name="elevation_six">@dimen/six</dimen>
+    <dimen name="elevation_eight">@dimen/eight</dimen>
+    <dimen name="elevation_ten">@dimen/ten</dimen>
+    <dimen name="elevation_twelve">@dimen/twelve</dimen>
+    <dimen name="elevation_fourteen">@dimen/fourteen</dimen>
+    <dimen name="elevation_sixteen">@dimen/sixteen</dimen>
+    <dimen name="elevation_eighteen">@dimen/eighteen</dimen>
+    <dimen name="elevation_twenty">@dimen/twenty</dimen>
+    <dimen name="elevation_twenty_two">@dimen/twenty_two</dimen>
+    <dimen name="elevation_twenty_four">@dimen/twenty_four</dimen>
+    <dimen name="elevation_twenty_six">@dimen/twenty_six</dimen>
+    <dimen name="elevation_wenty_eight">@dimen/twenty_eight</dimen>
+
+
+    <!-- Radius -->
+    <dimen name="radius_two">@dimen/two</dimen>
+    <dimen name="radius_four">@dimen/four</dimen>
+    <dimen name="radius_six">@dimen/six</dimen>
+    <dimen name="radius_eight">@dimen/eight</dimen>
+    <dimen name="radius_ten">@dimen/ten</dimen>
+    <dimen name="radius_twelve">@dimen/twelve</dimen>
+    <dimen name="radius_fourteen">@dimen/fourteen</dimen>
+    <dimen name="radius_sixteen">@dimen/sixteen</dimen>
+    <dimen name="radius_eighteen">@dimen/eighteen</dimen>
+    <dimen name="radius_twenty">@dimen/twenty</dimen>
+    <dimen name="radius_twenty_two">@dimen/twenty_two</dimen>
+    <dimen name="radius_twenty_four">@dimen/twenty_four</dimen>
+    <dimen name="radius_twenty_six">@dimen/twenty_six</dimen>
+    <dimen name="radius_wenty_eight">@dimen/twenty_eight</dimen>
+
+    <!-- Drawer Menu -->
+    <dimen name="drawer_menu_width">240dp</dimen>
+
+</resources>
