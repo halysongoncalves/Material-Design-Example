@@ -1,5 +1,6 @@
 Material Design Example
 ========================
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android--ObservableScrollView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/1296)
 
 Material Design Example is a sample application for the new design concept made by Google, Material Design. Besides the design, we have the new APIs introduced in Android SDK Lollipop:
 
@@ -21,6 +22,8 @@ Screenshots
 
 <img src="art/MaterialExampleDesign1.png" height="400" alt="Screenshot"/> 
 <img src="art/MaterialExampleDesign2.png" height="400" alt="Screenshot"/> 
+![](gif/MaterialDesignExample.gif)
+
 
 Getting Started
 ---------------
