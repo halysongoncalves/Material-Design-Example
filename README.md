@@ -22,7 +22,6 @@ Screenshots
 
 <img src="art/MaterialExampleDesign1.png" height="400" alt="Screenshot"/> 
 <img src="art/MaterialExampleDesign2.png" height="400" alt="Screenshot"/> 
-![](gif/MaterialDesignExample.gif)
 
 
 Getting Started
