@@ -47,12 +47,8 @@ Credits
 * Inspired by `ObservableScrollView` in [romannurik-code](https://code.google.com/p/romannurik-code/).
 * Inspired by `Android-ObservableScrollView` in [ksoichiro](https://github.com/ksoichiro/Android-ObservableScrollView).
 
-
-
-## Samples
+Samples
 ---------------
-### Google Play store
-
   [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=br.com.halyson.materialdesign)
 
 <h2>Copyright</h2>
