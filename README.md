@@ -37,6 +37,16 @@ https://github.com/halysongoncalves/Material-Design-Example
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
 
+Contributions
+---------------
+Any contributions are welcome!  
+Please check the [contributing guideline](https://github.com/halysongoncalves/Material-Design-Example/blob/master/CONTRIBUTING.md) before submitting a new issue.
+
+Credits
+---------------
+* Inspired by `ObservableScrollView` in [romannurik-code](https://code.google.com/p/romannurik-code/).
+* Inspired by `Android-ObservableScrollView` in [ksoichiro](https://github.com/ksoichiro/Android-ObservableScrollView).
+
 
 Getting Started
 ---------------
