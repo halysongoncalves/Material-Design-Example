@@ -1,61 +1,39 @@
-Material Design Example
-========================
+# Thank you for your contribution!
 
-Material Design Example is a sample application for the new design concept made by Google, Material Design. Besides the design, we have the new APIs introduced in Android SDK Lollipop:
+Any contributions will be greatly appreciated.
 
-* Custom theme colors
-* Circular reveal
-* Activity transitions
-* Toolbar
-* Recycler View
-* Card View
+Before submitting a new issue, please check the following guideline.
 
-Pre-requisites
---------------
+## Describe your issue as much as possible
 
-*  Android SDK v14
-*  Android Support Repository
+The example itself only provides the scroll information,
+and creating awesome scrolling effects depends deeply on how you use it: layout
 
-Screenshots
--------------
+Therefore, if you find an issue, please describe not only the issue itself but also the following information:
 
-<img src="art/MaterialExampleDesign1.png" height="400" alt="Screenshot"/> 
-<img src="art/MaterialExampleDesign2.png" height="400" alt="Screenshot"/> 
+### If you find it in the sample app of this project
 
-Getting Started
----------------
+* Required
+    * Activity name
+    * Operation to produce the issue
+    * Modified code
+        * If you modified some codes in the sample, it should be described with modified codes
+* Preferred
+    * Version (git commit hash) of the codes
+    * Android OS version
+    * device
+        * Nexus5, x86 emulator, etc.
 
-This sample uses the Gradle build system. To build this project, use the
-"gradlew build" command or use "Import Project" in Android Studio.
+### If you find it in your app
 
- Support
--------
-
-If you've found an error in this sample, please file an issue:
-https://github.com/halysongoncalves/Material-Design-Example
-
-Patches are encouraged, and may be submitted by forking this project and
-submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
-
-
-Getting Started
----------------
-  [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=br.com.halyson.materialdesign)
-
-<h2>Copyright</h2>
-
-    Copyright 2014 Halyson Gonçalves. All rights reserved.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
-
+* Required
+    * Operation to produce the issue
+    * Related code
+        * Without the related codes, I can't say anything.  
+          Screenshot / movie is useful to understand the issue,
+          but not enough to discuss the cause of the issue.
+* Preferred
+    * Version of the example
+    * Android OS version
+    * device
+        * Nexus5, x86 emulator, etc.
