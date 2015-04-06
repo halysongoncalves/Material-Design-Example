@@ -10,7 +10,7 @@ Material Design Example is a sample application for the new design concept made 
 * Toolbar
 * Recycler View
 * Card View
-* Floac Action Button
+* Floating Action Button
 * ObservableScrollView
 
 Pre-requisites
